@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowStack — Project Management for Modern Teams</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">FlowStack</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#pricing" class="btn btn-sm">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="badge fade-in">Now in public beta</span>
+          <h1 class="fade-in delay-1">Ship faster with<br><span class="gradient-text">smarter workflows</span></h1>
+          <p class="hero-sub fade-in delay-2">FlowStack brings your team, tasks, and tools into one place. Plan sprints, track progress, and deliver on time — without the chaos.</p>
+          <div class="hero-actions fade-in delay-3">
+            <a href="#pricing" class="btn btn-primary">Start free trial</a>
+            <a href="#features" class="btn btn-outline">See features</a>
+          </div>
+          <p class="hero-note fade-in delay-4">No credit card required · 14-day free trial</p>
+        </div>
+        <div class="hero-visual fade-in delay-2">
+          <div class="dashboard-mock">
+            <div class="mock-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-sidebar"></div>
+              <div class="mock-main">
+                <div class="mock-card"></div>
+                <div class="mock-card short"></div>
+                <div class="mock-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Everything your team needs</h2>
+          <p>Powerful features that scale with you, from startup to enterprise.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Real-time Collaboration</h3>
+            <p>Work together live with shared boards, comments, and instant updates across your entire team.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Smart Analytics</h3>
+            <p>Track velocity, burndown charts, and team performance with dashboards that actually make sense.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <h3>50+ Integrations</h3>
+            <p>Connect Slack, GitHub, Figma, and more. Your tools, unified in one workflow.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Enterprise Security</h3>
+            <p>SOC 2 compliant with SSO, role-based access, and audit logs to keep your data safe.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI Assist</h3>
+            <p>Auto-prioritize tasks, suggest deadlines, and summarize standups so you focus on what matters.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mobile Ready</h3>
+            <p>Full-featured apps for iOS and Android. Manage projects from anywhere, anytime.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Calculator -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Simple, transparent pricing</h2>
+          <p>Adjust the sliders to see your estimated cost.</p>
+        </div>
+
+        <div class="billing-toggle">
+          <span class="billing-label" id="monthlyLabel">Monthly</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="billingToggle" aria-label="Toggle yearly billing">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="billing-label" id="yearlyLabel">Yearly <span class="save-badge">Save 20%</span></span>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-sliders">
+            <div class="slider-group">
+              <div class="slider-label">
+                <label for="users">Team members</label>
+                <span id="usersValue">10</span>
+              </div>
+              <input type="range" id="users" min="1" max="500" value="10" step="1">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <label for="storage">Storage (GB)</label>
+                <span id="storageValue">50</span>
+              </div>
+              <input type="range" id="storage" min="10" max="1000" value="50" step="10">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <label for="projects">Active projects</label>
+                <span id="projectsValue">5</span>
+              </div>
+              <input type="range" id="projects" min="1" max="100" value="5" step="1">
+            </div>
+          </div>
+
+          <div class="pricing-result">
+            <p class="price-label" id="priceLabel">Estimated monthly cost</p>
+            <div class="price-display">
+              <span class="currency">$</span>
+              <span class="price" id="totalPrice">149</span>
+              <span class="period" id="pricePeriod">/mo</span>
+            </div>
+            <p class="billing-note" id="billingNote"></p>
+            <ul class="price-breakdown" id="priceBreakdown">
+              <li><span>Base plan</span><span>$49</span></li>
+              <li><span>10 users × $8</span><span>$80</span></li>
+              <li><span>50 GB storage</span><span>$10</span></li>
+              <li><span>5 projects</span><span>$10</span></li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block">Start your free trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Loved by teams everywhere</h2>
+          <p>See why thousands of companies trust FlowStack to deliver their best work.</p>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p>"FlowStack cut our sprint planning time in half. The AI suggestions alone are worth the subscription."</p>
+            <footer>
+              <div class="avatar">SK</div>
+              <div>
+                <cite>Sarah Kim</cite>
+                <span>Engineering Lead, NovaTech</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"We switched from three different tools to FlowStack. Our team finally has one source of truth."</p>
+            <footer>
+              <div class="avatar">MR</div>
+              <div>
+                <cite>Marcus Rivera</cite>
+                <span>COO, Brightline Studio</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"The pricing calculator sold us immediately. No surprises, no hidden fees — just honest SaaS."</p>
+            <footer>
+              <div class="avatar">AL</div>
+              <div>
+                <cite>Amara Liu</cite>
+                <span>Founder, Pixel &amp; Co</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#" class="logo">FlowStack</a>
+      <p>&copy; 2026 FlowStack. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
