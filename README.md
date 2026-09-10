@@ -5,7 +5,7 @@ A modern, responsive SaaS landing page and interactive pricing calculator built 
 ![FlowStack screenshot](Screenshot.png)
 
 ## Live demo
-[View The Live Demo](https://flow-stack-mmwlhkpnf-stephen-bd91.vercel.app/)
+[View The Live Demo](flow-stack-three.vercel.app)
 
 ## Features
 - Interactive pricing calculator with real-time sliders for team members, storage, and active projects
